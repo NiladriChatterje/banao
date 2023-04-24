@@ -4,15 +4,14 @@ img {
 }
 
 #headings {
+    padding: 10px 2px;
     height: 100vh;
+    margin: auto;
+    width: 1040px;
     position: sticky;
 }
 
 #headings>div {
-    margin: auto;
-    width: 1040px;
     display: flex;
     justify-content: space-between;
 }
-
-#podcast_container>section {}
