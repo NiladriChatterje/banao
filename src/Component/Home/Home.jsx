@@ -7,8 +7,7 @@ const Heading = ['All Posts(', 'Article', 'Event', 'Education', 'Job'];
 const Home = () => {
 
     return (
-        <>
-
+        <><h1></h1>
             <img src={Rect_3} alt='Banner' />
             <section id={'headings'}>
                 <div>
