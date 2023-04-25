@@ -13,13 +13,16 @@ import {
 	Image,
 } from "react-bootstrap"
 import { AiOutlineArrowLeft } from "react-icons/ai"
-import { BsFillPencilFill } from "react-icons/bs"
+import { BsFillPencilFill, BsFillHandThumbsUpFill } from "react-icons/bs"
 import { GrLocation } from 'react-icons/gr'
 import { RiErrorWarningLine } from 'react-icons/ri'
+import { toast } from "react-hot-toast"
 
-const Heading = ["All Posts", "Article", "Event", "Education", "Job"]
+const Heading = ["All Posts", "Article", "Event", "Education", "Job"];
+const RecommendedGroups = ['Leisure', 'Activism', 'MBA', 'Philosophy']
 const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 	const [joinState, setJoinState] = React.useState(() => true);
+	const [ifLoginthenRecomment, setIfLoginThenRecomment] = React.useState(() => true);
 
 	return (
 		<>{modalToggle ? <Modal setModalToggle={setModalToggle} modalToggle={modalToggle}
@@ -30,7 +33,7 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 					<h1>Computer Engineering</h1>
 					<p>142,765 Computer Engineers follow this</p>
 				</div>
-				<button id='join'>
+				<button id='join' onClick={() => toast('Currently Backend is at service')}>
 					{joinState ? 'Join Group' : 'Leave Group'}
 				</button>
 			</div>
@@ -103,6 +106,13 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 							id={'note'} />
 						<input type={'text'} className="note" />
 						<span style={{ textAlign: 'justify' }}><RiErrorWarningLine /> Your Location will help us serve better and extend a personalised experience.</span>
+						{ifLoginthenRecomment ? <div className="mt-5">
+							<span><BsFillHandThumbsUpFill /> RECOMMENDED GROUPS</span>
+							{RecommendedGroups?.map(item => <section className="mt-2 w-100 d-flex justify-content-between"
+							><span>{item}</span><Button onClick={() => toast(`you started following ${item}`)}
+								variant="secondary" className=" rounded-pill">Follow</Button></section>)}
+
+						</div> : null}
 					</div>
 
 				</div>

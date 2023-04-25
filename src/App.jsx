@@ -2,11 +2,13 @@ import { Navbar, Home, Event, Article, Education, Job } from './Component'
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 function App() {
   const [modalToggle, setModalToggle] = useState(() => false);
   const [toggle, setToggle] = useState(() => true);
   return (
     <div className="App">
+      <Toaster />
       <Navbar setModalToggle={setModalToggle} setToggle={setToggle} />
       <Routes>
         <Route path={'/'} element={<Home modalToggle={modalToggle} setModalToggle={setModalToggle}

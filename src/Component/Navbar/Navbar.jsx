@@ -9,7 +9,7 @@ function Navbar({ setToggle, setModalToggle }) {
         <nav>
             <img src={ATG} alt='LOGO' />
             <div className="inner-addon input-group left-addon position-relative">
-                <BiSearchAlt2 onClick={() => setToggle(prev => !prev)} cursor={'pointer'}
+                <BiSearchAlt2 cursor={'pointer'}
                     className='icon' />
                 <input type={'text'} className="form-control rounded-pill input" style={{ background: '#D9D9DB' }}
                     placeholder="Search for you favorite groups in ATG" />
