@@ -1,5 +1,5 @@
 #podcast-container {
-    max-width: 692px;
+    width: 500px;
     height: max-content;
     padding: 0 0 20px 0;
     left: 200px;
@@ -42,4 +42,10 @@
 
 #heading_podcast>h4 {
     max-width: 70%;
+}
+
+@media all and (max-width:1200px) {
+    #podcast-container {
+        width: 400px;
+    }
 }

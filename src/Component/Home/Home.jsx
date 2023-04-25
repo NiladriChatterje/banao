@@ -8,7 +8,6 @@ import { Button, ButtonGroup, Dropdown, DropdownButton, Image } from 'react-boot
 
 const Heading = ['All Posts', 'Article', 'Event', 'Education', 'Job'];
 const Home = () => {
-
     return (
         <>
             <div id='Banner'>
@@ -19,9 +18,8 @@ const Home = () => {
                 <div>
                     <span>
                         {Heading?.map((item, i) => <Link key={i} to={`/${item}`} style={{ marginRight: '15px', color: 'grey', textDecoration: 'none' }} >
-                            {item == 'All Posts' ? `${item}(${Heading.length})` : item}</Link>)}
+                            {item == 'All Posts' ? `${item}(${podcastsArray.length})` : item}</Link>)}
                     </span>
-                    <hr />
                     <div>
 
                         <Button variant='secondary' className='me-3'>Write a Post</Button>
