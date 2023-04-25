@@ -11,16 +11,33 @@ const Podcast = ({ item }) => {
 				<h6>{item?.genre}</h6>
 				<span id="heading_podcast">
 					<h4>{item?.heading}</h4>
-					<Dropdown>
-						<Dropdown.Toggle variant="none" id="dropdown-basic">
+					<div className="dropdown">
+						<button
+							className="btn btn-secondary dropdown-toggle"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
 							<BsThreeDots />
-						</Dropdown.Toggle>
-						<Dropdown.Menu>
-							<Dropdown.Item href="">edit</Dropdown.Item>
-							<Dropdown.Item href="">Report</Dropdown.Item>
-							<Dropdown.Item href="">Option 3</Dropdown.Item>
-						</Dropdown.Menu>
-					</Dropdown>
+						</button>
+						<ul className="dropdown-menu">
+							<li>
+								<a className="dropdown-item" href="#">
+									edit
+								</a>
+							</li>
+							<li>
+								<a className="dropdown-item" href="#">
+									Report
+								</a>
+							</li>
+							<li>
+								<a className="dropdown-item" href="#">
+									Option 3
+								</a>
+							</li>
+						</ul>
+					</div>
 				</span>
 				<p>
 					{item?.description.length > 40
@@ -59,10 +76,9 @@ const Podcast = ({ item }) => {
 								display: "flex",
 								columnGap: "5px",
 								alignItems: "center",
-								justifyContent: 'center'
 							}}
 						>
-							<BsEyeFill className="mb-1" />
+							<BsEyeFill />
 							<h6>{item?.views} views</h6>
 						</span>
 						<Button variant="secondary">

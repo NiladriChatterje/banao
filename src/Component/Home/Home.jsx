@@ -29,7 +29,7 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 				<div id="desk-navs">
 					<span>
 						{Heading?.map((item, i) => (
-							<Link className="text-muted" key={i} to={`/${item}`}>
+							<Link className="text-muted" key={i} to={`/${item == "All Posts" ? '' : item}`}>
 								{item == "All Posts"
 									? `${item}(${podcastsArray.length})`
 									: item}

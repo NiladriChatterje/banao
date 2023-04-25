@@ -50,6 +50,16 @@
 	}
 }
 
+#heading_podcast > div > button {
+	background: white;
+	border: none;
+	color: #000000;
+}
+
+#heading_podcast > div > button::after {
+	content: none !important;
+}
+
 @media screen and (max-width: 768px) {
 	#podcast-container {
 		width: 100%;

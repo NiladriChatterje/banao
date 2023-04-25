@@ -20,3 +20,5 @@ nav img {
 .input::placeholder {
     text-align: center;
 }
+
+@media all and (max-width:1200px) {}

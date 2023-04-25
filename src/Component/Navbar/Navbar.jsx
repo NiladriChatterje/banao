@@ -1,27 +1,19 @@
 import React from 'react';
 import './Navbar.css';
 import ATG from '../../assets/Union1.png';
-import { InputGroup, Form, Dropdown } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import { BiSearchAlt2 } from 'react-icons/bi'
 
 function Navbar({ setModalToggle, setToggle }) {
     return (
         <nav>
             <img src={ATG} alt='LOGO' />
-            <InputGroup style={{
-                textAlign: 'center', display: 'flex', alignItems: 'center',
-                background: '#F2F2F2', width: '360px', padding: '0 15px',
-                height: '42px', borderRadius: '21px'
-            }}>
-                <BiSearchAlt2 />
-                <Form.Control placeholder={'Search for your favorite groups in ATG'} className='input'
-                    style={{
-                        fontFamily: 'FontAwesome',
-                        textAlign: 'center', borderStyle: 'none',
-                        background: 'transparent', width: '300px',
-                        height: '42px', borderRadius: '21px'
-                    }} />
-            </InputGroup>
+            <div className="inner-addon input-group left-addon w-25 position-relative">
+                <input type={'text'} className="form-control rounded-pill input" style={{ background: '#D9D9DB' }}
+                    placeholder="Search for you favorite groups in ATG" />
+                <BiSearchAlt2 onClick={() => setToggle(prev => !prev)} cursor={'pointer'}
+                    className='position-absolute top-50 ms-4 translate-middle' />
+            </div>
             <Dropdown>
                 Create account
                 <Dropdown.Toggle variant="none" style={{ color: 'blue' }} id="dropdown-basic">
