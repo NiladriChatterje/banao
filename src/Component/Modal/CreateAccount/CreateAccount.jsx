@@ -15,7 +15,7 @@ const CreateAccount = () => {
                     <input type="text" className="form-control" placeholder='First name' />
                     <input type="text" className="form-control" placeholder='Last name' />
                 </div>
-                <input type="email" class="form-control" placeholder="email" aria-label="" />
+                <input type="email" className="form-control" placeholder="email" aria-label="" />
                 <div className="inner-addon input-group left-addon w-100 position-relative">
                     <input type={toggle ? 'text' : 'password'} className="form-control rounded" placeholder="password" aria-label="" />
                     <AiFillEye onClick={() => setToggle(prev => !prev)} cursor={'pointer'}
