@@ -7,21 +7,27 @@ img {
     padding: 10px 2px;
     height: 150vh;
     margin: auto;
-    width: 1040px;
+    max-width: 1040px;
     position: sticky;
     top: 71px;
 }
 
+#podcast_container {
+    max-width: 70%;
+}
+
 #Banner {
+    transition: all 200ms;
     filter: brightness(80%);
     width: 100%;
     color: white;
     height: 440px;
     display: flex;
-    padding: 80px 200px;
+    padding: 80px 15%;
     flex-direction: column;
     justify-content: flex-end;
     background-image: url('../../assets/rect03.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -29,4 +35,10 @@ img {
 #headings>div {
     display: flex;
     justify-content: space-between;
+}
+
+@media all and (max-width:1200px) {
+    #Banner {
+        background-image: url('../../assets/rect03_mobile.png');
+    }
 }

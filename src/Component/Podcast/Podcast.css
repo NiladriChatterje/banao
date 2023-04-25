@@ -1,6 +1,7 @@
 #podcast-container {
-    width: 692px;
-    height: 472px;
+    max-width: 692px;
+    height: max-content;
+    padding: 0 0 20px 0;
     left: 200px;
     top: 628px;
     display: flex;
@@ -9,4 +10,36 @@
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 4px;
+    margin: 8px 0;
+}
+
+#podcast_profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+#podcast_profile img {
+    object-fit: contain;
+    width: 37px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+#podcast_profile>div {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+#podcast-container>section {
+    width: 95%;
+}
+
+#heading_podcast {
+    display: flex;
+    justify-content: space-between;
+}
+
+#heading_podcast>h4 {
+    max-width: 70%;
 }
