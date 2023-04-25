@@ -11,10 +11,10 @@ const Modal = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 
     return (<>
         {modalToggle ? (<div id={'modal_container'}>
-            <Card style={{
-                width: '47rem', height: 'max-content',
-                background: '#EFFFF4'
-            }} className="position-absolute top-50 start-50 translate-middle">
+            <Card border='1px' style={{
+                width: '47rem', height: 'max-content'
+            }}
+                className="position-absolute top-50 start-50 translate-middle">
                 <IoIosCloseCircle onClick={() => setModalToggle(false)}
                     style={{ position: 'absolute', right: '0px', top: '-20px', color: 'white', cursor: 'pointer' }} />
                 <Card.Header className='fw-semibold fs-6 text-center'
@@ -23,8 +23,9 @@ const Modal = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
                 </Card.Header>
                 <Card.Body className="d-flex justify-content-center">
                     {toggle ? <Login /> : <CreateAccount />}
-                    <div className='w-50'>
-                        <Card.Text>{toggle ? 'Already have an account?' : 'Create an Account'}</Card.Text>
+                    <div className='w-50 d-flex flex-column align-items-center'>
+                        <Card.Text style={{ cursor: 'pointer' }}
+                            onClick={() => setToggle(prev => !prev)}>{toggle ? 'Create an Account' : 'Already have an account? Sign In'}</Card.Text>
                         <Image src={ModalImage} fluid width={320} style={{ objectFit: 'Container' }} alt='modalImage' />
                     </div>
                 </Card.Body>

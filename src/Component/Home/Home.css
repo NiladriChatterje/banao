@@ -12,7 +12,6 @@ img {
     top: 71px;
 }
 
-
 #Banner {
     transition: all 200ms;
     filter: brightness(80%);
@@ -23,7 +22,7 @@ img {
     padding: 80px 15%;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url('../../assets/rect03.png');
+    background-image: url("../../assets/rect03.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,9 +33,9 @@ img {
     justify-content: space-between;
 }
 
-@media all and (max-width:1200px) {
+@media all and (max-width: 1200px) {
     #Banner {
-        background-image: url('../../assets/rect03_mobile.png');
+        background-image: url("../../assets/rect03_mobile.png");
     }
 
     #headings {
@@ -44,5 +43,55 @@ img {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.text-muted {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#mobile-navs {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    #Banner {
+        background-image: url("../../assets/rect03_mobile.png");
+        height: 100%;
+    }
+
+    #texts-head {
+        position: relative;
+        top: 60px;
+        right: 30px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #desk-navs {
+        display: none !important;
+    }
+
+    #mobile-navs {
+        width: 100%;
+        padding: 2px 18px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+    }
+
+    #mobile-navs>div {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    #drp-btn {
+        background-color: #eee;
+        border: none;
+        color: #000;
+        font-weight: bold;
     }
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import './Navbar.css';
 import ATG from '../../assets/Union1.png';
 import { InputGroup, Form, Dropdown } from 'react-bootstrap';
-import { BsFillCaretDownFill } from 'react-icons/bs';
 import { BiSearchAlt2 } from 'react-icons/bi'
 
 function Navbar({ setModalToggle, setToggle }) {
