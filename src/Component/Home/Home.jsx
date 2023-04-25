@@ -65,7 +65,7 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 						</ButtonGroup>
 					</div>
 				</div>
-				<span style={{ width: '100%', height: '1px', backgroundColor: 'grey', position: 'absolute', margin: '6px 0' }} />
+				<hr className="bg-danger border-2 border-top border-danger" />
 
 				<div id="mobile-navs">
 					<div>Posts({podcastsArray.length})</div>
