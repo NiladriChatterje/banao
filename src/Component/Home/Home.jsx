@@ -13,6 +13,9 @@ import {
 	Image,
 } from "react-bootstrap"
 import { AiOutlineArrowLeft } from "react-icons/ai"
+import { BsFillPencilFill } from "react-icons/bs"
+import { GrLocation } from 'react-icons/gr'
+import { RiErrorWarningLine } from 'react-icons/ri'
 
 const Heading = ["All Posts", "Article", "Event", "Education", "Job"]
 const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
@@ -94,6 +97,14 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 							<Podcast key={i} item={item} />
 						))}
 					</div>
+					<div style={{ position: 'relative', width: '30%' }} id={'mobile_view_notes'}>
+						<GrLocation style={{ position: 'absolute', left: '0px', top: '5px' }} />
+						<BsFillPencilFill onClick={() => setToggle(prev => !prev)} cursor={'pointer'}
+							id={'note'} />
+						<input type={'text'} className="note" />
+						<span style={{ textAlign: 'justify' }}><RiErrorWarningLine /> Your Location will help us serve better and extend a personalised experience.</span>
+					</div>
+
 				</div>
 			</section>
 		</>

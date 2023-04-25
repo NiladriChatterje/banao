@@ -16,6 +16,21 @@ img {
     display: none;
 }
 
+#note {
+    position: absolute;
+    right: 0;
+
+}
+
+.note {
+    width: 100%;
+    outline: none;
+    border-style: none;
+    border-bottom: 2px solid #000;
+    padding: 2px 25px;
+    margin-bottom: 25px;
+}
+
 #Banner {
     transition: all 200ms;
     filter: brightness(80%);
@@ -42,7 +57,14 @@ img {
     display: none;
 }
 
-@media all and (max-width: 1200px) {
+#podcast_container {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media all and (max-width: 1000px) {
     #Banner {
         background-image: url("../../assets/rect03_mobile.png");
     }
@@ -70,6 +92,10 @@ img {
         height: 100%;
     }
 
+    #mobile_view_notes {
+        display: none;
+    }
+
     #texts-head {
         position: relative;
         top: 60px;
@@ -85,7 +111,7 @@ img {
     }
 
     #arrow-icon {
-        display: none;
+        display: block;
     }
 
     #mobile-navs {
@@ -107,6 +133,7 @@ img {
     }
 
     #join {
+        display: block;
         position: absolute;
         top: 10%;
         background-color: transparent;
