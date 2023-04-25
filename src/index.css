@@ -2,6 +2,8 @@ body {
   margin: 0;
   width: 100%;
   overflow-x: clip;
+  font-size: 0.80em;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {

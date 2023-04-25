@@ -20,9 +20,3 @@ nav img {
 .input::placeholder {
     text-align: center;
 }
-
-@media screen and (max-width: 768px) {
-    nav {
-        display: none;
-    }
-}

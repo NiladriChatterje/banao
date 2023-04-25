@@ -11,21 +11,20 @@ const Modal = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 
     return (<>
         {modalToggle ? (<div id={'modal_container'}>
-            <Card border='1px' style={{
-                width: '47rem', height: 'max-content'
-            }}
-                className="position-absolute top-50 start-50 translate-middle">
+            <Card border='1px' id='modal'
+                className="position-absolute">
                 <IoIosCloseCircle onClick={() => setModalToggle(false)}
                     style={{ position: 'absolute', right: '0px', top: '-20px', color: 'white', cursor: 'pointer' }} />
-                <Card.Header className='fw-semibold fs-6 text-center'
+                <Card.Header className='fw-semibold text-center'
                     style={{ color: '#008A45', background: '#EFFFF4' }}>
                     Lets Learn, share & inspire each other with our passion for computer engineering. Sign Up now 🤘
                 </Card.Header>
-                <Card.Body className="d-flex justify-content-center">
+                <Card.Body className="d-flex justify-content-center ">
                     {toggle ? <Login /> : <CreateAccount />}
                     <div className='w-50 d-flex flex-column align-items-center'>
-                        <Card.Text style={{ cursor: 'pointer' }}
-                            onClick={() => setToggle(prev => !prev)}>{toggle ? 'Create an Account' : 'Already have an account? Sign In'}</Card.Text>
+                        <Card.Text>
+                            {toggle ? <span>Don't have an account yet? <span onClick={() => setToggle(prev => !prev)} style={{ cursor: 'pointer' }} className='text-primary'>Create new for free!</span>
+                            </span> : <span>Already have an account? <span onClick={() => setToggle(prev => !prev)} style={{ cursor: 'pointer' }} className='text-primary'>Sign In</span></span>}</Card.Text>
                         <Image src={ModalImage} fluid width={320} style={{ objectFit: 'Container' }} alt='modalImage' />
                     </div>
                 </Card.Body>
