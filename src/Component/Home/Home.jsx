@@ -5,11 +5,14 @@ import Group from '../../assets/Vector.png'
 import podcastsArray from './podcast.js';
 import Podcast from '../Podcast/Podcast'
 import { Button, ButtonGroup, Dropdown, DropdownButton, Image } from 'react-bootstrap';
+import Modal from '../Modal/Modal';
 
 const Heading = ['All Posts', 'Article', 'Event', 'Education', 'Job'];
-const Home = () => {
+const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
+
     return (
-        <>
+        <>{modalToggle ? <Modal setModalToggle={setModalToggle} modalToggle={modalToggle}
+            toggle={toggle} setToggle={setToggle} /> : null}
             <div id='Banner'>
                 <h1>Computer Engineering</h1>
                 <p>142,765 Computer Engineers follow this</p>

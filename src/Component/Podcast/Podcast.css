@@ -13,11 +13,6 @@
     margin: 8px 0;
 }
 
-#podcast_profile {
-    display: flex;
-    justify-content: space-between;
-}
-
 #podcast_profile img {
     object-fit: contain;
     width: 37px;

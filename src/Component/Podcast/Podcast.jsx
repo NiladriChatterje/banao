@@ -10,7 +10,7 @@ const Podcast = ({ item }) => {
             <section>
                 <h6>{item?.genre}</h6>
                 <span id='heading_podcast'>
-                    <h4>{item?.heading}</h4>
+                    <h5>{item?.heading}</h5>
                     <Dropdown>
                         <Dropdown.Toggle variant="none" id="dropdown-basic">
                             <BsThreeDots />
@@ -25,10 +25,10 @@ const Podcast = ({ item }) => {
                 <p>{item?.description.length > 40 ? item?.description.slice(0, 40) + '...' : item?.description}</p>
                 {item?.website && <Button style={{ width: '100%', background: 'transparent', color: 'orange', margin: '8px 0' }}
                     onClick={() => window.open(item?.website, '_blank')}>Website</Button>}
-                <span id={'podcast_profile'}>
+                <span id={'podcast_profile'} className="d-flex justify-content-between">
                     <div>
                         <span style={{ display: 'flex', columnGap: '5px', alignItems: 'center' }}>
-                            <img src={item?.profileImage} alt='Profile Photo' />
+                            <Image src={item?.profileImage} alt='Profile Photo' roundedCircle />
                             <h3>{item?.profilename}</h3>
                         </span>
                     </div>

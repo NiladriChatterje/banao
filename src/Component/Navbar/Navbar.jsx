@@ -5,7 +5,7 @@ import { InputGroup, Form, Dropdown } from 'react-bootstrap';
 import { BsFillCaretDownFill } from 'react-icons/bs';
 import { BiSearchAlt2 } from 'react-icons/bi'
 
-function Navbar() {
+function Navbar({ setModalToggle, setToggle }) {
     return (
         <nav>
             <img src={ATG} alt='LOGO' />
@@ -30,8 +30,8 @@ function Navbar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item >Sign In</Dropdown.Item>
-                    <Dropdown.Item >Create Account</Dropdown.Item>
+                    <Dropdown.Item onClick={() => { setModalToggle(true); setToggle(true) }} >Sign In</Dropdown.Item>
+                    <Dropdown.Item onClick={() => { setModalToggle(true); setToggle(false) }}>Create Account</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </nav>
