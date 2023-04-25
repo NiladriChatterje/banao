@@ -1,0 +1,12 @@
+#podcast-container {
+    width: 692px;
+    height: 472px;
+    left: 200px;
+    top: 628px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+}

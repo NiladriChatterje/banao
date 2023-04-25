@@ -5,10 +5,25 @@ img {
 
 #headings {
     padding: 10px 2px;
-    height: 100vh;
+    height: 150vh;
     margin: auto;
     width: 1040px;
     position: sticky;
+    top: 71px;
+}
+
+#Banner {
+    filter: brightness(80%);
+    width: 100%;
+    color: white;
+    height: 440px;
+    display: flex;
+    padding: 80px 200px;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url('../../assets/rect03.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #headings>div {
