@@ -49,7 +49,7 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 						))}
 					</span>
 					<div>
-						<Button variant="secondary" className="me-3">
+						<Button variant="secondary" className="me-3 mt-0 mb-0">
 							Write a Post
 						</Button>
 						<ButtonGroup style={{ background: "#2F6CE5" }}>
@@ -69,30 +69,28 @@ const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
 
 				<div id="mobile-navs">
 					<div>Posts({podcastsArray.length})</div>
-					<div>
-						<div className="dropdown">
-							<button
-								id="drp-btn"
-								className="btn btn-secondary dropdown-toggle"
-								type="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								Filter: All
-							</button>
-							<ul className="dropdown-menu">
-								<li>
-									<a className="dropdown-item" href="#">
-										Leisure
-									</a>
-								</li>
-								<li>
-									<a className="dropdown-item" href="#">
-										Activism
-									</a>
-								</li>
-							</ul>
-						</div>
+					<div className="dropdown">
+						<button
+							id="drp-btn"
+							className="btn btn-secondary dropdown-toggle"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Filter: All
+						</button>
+						<ul className="dropdown-menu">
+							<li>
+								<a className="dropdown-item" href="#">
+									Leisure
+								</a>
+							</li>
+							<li>
+								<a className="dropdown-item" href="#">
+									Activism
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div id="podcast_container">
