@@ -12,18 +12,24 @@ import {
 	DropdownButton,
 	Image,
 } from "react-bootstrap"
+import { AiOutlineArrowLeft } from "react-icons/ai"
 
 const Heading = ["All Posts", "Article", "Event", "Education", "Job"]
 const Home = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
+	const [joinState, setJoinState] = React.useState(() => true);
 
 	return (
 		<>{modalToggle ? <Modal setModalToggle={setModalToggle} modalToggle={modalToggle}
 			toggle={toggle} setToggle={setToggle} /> : null}
 			<div id="Banner">
+				<AiOutlineArrowLeft id={'arrow-icon'} style={{ position: 'absolute', left: '3%', color: 'white', top: '10%' }} />
 				<div id="texts-head">
 					<h1>Computer Engineering</h1>
 					<p>142,765 Computer Engineers follow this</p>
 				</div>
+				<button id='join'>
+					{joinState ? 'Join Group' : 'Leave Group'}
+				</button>
 			</div>
 			<section id={"headings"}>
 				<div id="desk-navs">

@@ -12,9 +12,14 @@ img {
     top: 71px;
 }
 
+#arrow-icon {
+    display: none;
+}
+
 #Banner {
     transition: all 200ms;
     filter: brightness(80%);
+    position: sticky;
     width: 100%;
     color: white;
     height: 440px;
@@ -31,6 +36,10 @@ img {
 #headings>div {
     display: flex;
     justify-content: space-between;
+}
+
+#join {
+    display: none;
 }
 
 @media all and (max-width: 1200px) {
@@ -75,6 +84,10 @@ img {
         display: none !important;
     }
 
+    #arrow-icon {
+        display: none;
+    }
+
     #mobile-navs {
         width: 100%;
         padding: 2px 18px;
@@ -86,6 +99,22 @@ img {
     #mobile-navs>div {
         font-weight: bold;
         font-size: 1.2em;
+    }
+
+    #arrow-icon {
+        display: block;
+        font-size: 2em;
+    }
+
+    #join {
+        position: absolute;
+        top: 10%;
+        background-color: transparent;
+        right: 5%;
+        border-radius: 5px;
+        border: 3px solid white;
+        color: white;
+        padding: 6px 10px;
     }
 
     #drp-btn {

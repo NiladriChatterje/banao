@@ -8,20 +8,12 @@ function Navbar({ setToggle, setModalToggle }) {
     return (
         <nav>
             <img src={ATG} alt='LOGO' />
-            <InputGroup style={{
-                textAlign: 'center', display: 'flex', alignItems: 'center',
-                background: '#F2F2F2', width: '360px', padding: '0 15px',
-                height: '42px', borderRadius: '21px'
-            }}>
-                <BiSearchAlt2 />
-                <Form.Control placeholder={'Search for your favorite groups in ATG'}
-                    style={{
-                        fontFamily: 'FontAwesome',
-                        textAlign: 'center', borderStyle: 'none',
-                        background: 'transparent', width: '300px',
-                        height: '42px', borderRadius: '21px'
-                    }} />
-            </InputGroup>
+            <div className="inner-addon input-group left-addon position-relative">
+                <BiSearchAlt2 onClick={() => setToggle(prev => !prev)} cursor={'pointer'}
+                    className='icon' />
+                <input type={'text'} className="form-control rounded-pill input" style={{ background: '#D9D9DB' }}
+                    placeholder="Search for you favorite groups in ATG" />
+            </div>
             <Dropdown>
                 Create account
                 <Dropdown.Toggle variant="none" style={{ color: 'blue' }} id="dropdown-basic">

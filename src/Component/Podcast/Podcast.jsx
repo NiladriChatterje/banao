@@ -10,7 +10,7 @@ const Podcast = ({ item }) => {
 			<section>
 				<h6>{item?.genre}</h6>
 				<span id="heading_podcast">
-					<h4>{item?.heading}</h4>
+					<h5>{item?.heading}</h5>
 					<div className="dropdown">
 						<button
 							className="btn btn-secondary dropdown-toggle"
@@ -67,7 +67,7 @@ const Podcast = ({ item }) => {
 							}}
 						>
 							<img src={item?.profileImage} alt="Profile Photo" />
-							<h3>{item?.profilename}</h3>
+							<h4>{item?.profilename}</h4>
 						</span>
 					</div>
 					<div>
@@ -78,7 +78,7 @@ const Podcast = ({ item }) => {
 								alignItems: "center",
 							}}
 						>
-							<BsEyeFill />
+							<BsEyeFill style={{ marginBottom: '5px' }} />
 							<h6>{item?.views} views</h6>
 						</span>
 						<Button variant="secondary">
