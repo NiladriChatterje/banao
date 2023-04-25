@@ -17,8 +17,12 @@ nav img {
     width: max-content;
 }
 
-.input::placeholder {
+input[type=text]::placeholder {
     text-align: center;
 }
 
-@media all and (max-width:1200px) {}
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}

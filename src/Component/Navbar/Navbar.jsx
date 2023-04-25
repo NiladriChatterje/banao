@@ -1,19 +1,27 @@
 import React from 'react';
 import './Navbar.css';
 import ATG from '../../assets/Union1.png';
-import { Dropdown } from 'react-bootstrap';
+import { InputGroup, Form, Dropdown } from 'react-bootstrap';
 import { BiSearchAlt2 } from 'react-icons/bi'
 
-function Navbar({ setModalToggle, setToggle }) {
+function Navbar({ setToggle, setModalToggle }) {
     return (
         <nav>
             <img src={ATG} alt='LOGO' />
-            <div className="inner-addon input-group left-addon w-25 position-relative">
-                <input type={'text'} className="form-control rounded-pill input" style={{ background: '#D9D9DB' }}
-                    placeholder="Search for you favorite groups in ATG" />
-                <BiSearchAlt2 onClick={() => setToggle(prev => !prev)} cursor={'pointer'}
-                    className='position-absolute top-50 ms-4 translate-middle' />
-            </div>
+            <InputGroup style={{
+                textAlign: 'center', display: 'flex', alignItems: 'center',
+                background: '#F2F2F2', width: '360px', padding: '0 15px',
+                height: '42px', borderRadius: '21px'
+            }}>
+                <BiSearchAlt2 />
+                <Form.Control placeholder={'Search for your favorite groups in ATG'}
+                    style={{
+                        fontFamily: 'FontAwesome',
+                        textAlign: 'center', borderStyle: 'none',
+                        background: 'transparent', width: '300px',
+                        height: '42px', borderRadius: '21px'
+                    }} />
+            </InputGroup>
             <Dropdown>
                 Create account
                 <Dropdown.Toggle variant="none" style={{ color: 'blue' }} id="dropdown-basic">
@@ -21,8 +29,8 @@ function Navbar({ setModalToggle, setToggle }) {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => { setModalToggle(true); setToggle(true) }} >Sign In</Dropdown.Item>
-                    <Dropdown.Item onClick={() => { setModalToggle(true); setToggle(false) }}>Create Account</Dropdown.Item>
+                    <Dropdown.Item onClick={() => { setModalToggle(true); setToggle(false) }} >Sign In</Dropdown.Item>
+                    <Dropdown.Item onClick={() => { setModalToggle(true); setToggle(false) }} >Create Account</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </nav>

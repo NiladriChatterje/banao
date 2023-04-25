@@ -20,8 +20,8 @@ const Modal = ({ setModalToggle, modalToggle, toggle, setToggle }) => {
                     Lets Learn, share & inspire each other with our passion for computer engineering. Sign Up now 🤘
                 </Card.Header>
                 <Card.Body className="d-flex justify-content-center ">
-                    {toggle ? <Login /> : <CreateAccount />}
-                    <div className='w-50 d-flex flex-column align-items-center'>
+                    {toggle ? <Login setModalToggle={setToggle} /> : <CreateAccount setModalToggle={setToggle} />}
+                    <div id={'modal_picture'}>
                         <Card.Text>
                             {toggle ? <span>Don't have an account yet? <span onClick={() => setToggle(prev => !prev)} style={{ cursor: 'pointer' }} className='text-primary'>Create new for free!</span>
                             </span> : <span>Already have an account? <span onClick={() => setToggle(prev => !prev)} style={{ cursor: 'pointer' }} className='text-primary'>Sign In</span></span>}</Card.Text>

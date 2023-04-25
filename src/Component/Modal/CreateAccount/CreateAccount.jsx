@@ -5,10 +5,10 @@ import { BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc'
 
 
-const CreateAccount = () => {
+const CreateAccount = ({ setModalToggle }) => {
     const [toggle, setToggle] = React.useState(() => false)
     return (
-        <div className='w-50'>
+        <div className='create_account'>
             <h3>Create Account</h3>
             <div className="input-group">
                 <input type="text" style={{ background: '#D9D9DB' }} className="form-control" placeholder='First name' />
@@ -21,7 +21,10 @@ const CreateAccount = () => {
                     className='position-absolute top-50 end-0 translate-middle z-index-3' />
             </div>
             <input type={'password'} style={{ background: '#D9D9DB' }} className="form-control w-100" placeholder="confirm password" aria-label="" />
-            <Button className='mt-5 w-100 rounded-pill'>Create Account</Button>
+            <span id='mobile_button_view'>
+                <Button className='mt-5 rounded-pill'>Create Account</Button>
+                <span onClick={() => setModalToggle(true)} style={{ color: 'rgb(0,0,233)', cursor: 'pointer' }}>or, Sign In</span>
+            </span>
             <div className="input-group d-flex flex-column align-items-center" style={{ marginTop: '10px' }}>
                 <Button variant='none' className="form-control w-100 rounded border" >
                     <BsFacebook className='me-2' />
