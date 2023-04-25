@@ -14,7 +14,7 @@ function Navbar({ setModalToggle, setToggle }) {
                 height: '42px', borderRadius: '21px'
             }}>
                 <BiSearchAlt2 />
-                <Form.Control placeholder={'Search for your favorite groups in ATG'}
+                <Form.Control placeholder={'Search for your favorite groups in ATG'} className='input'
                     style={{
                         fontFamily: 'FontAwesome',
                         textAlign: 'center', borderStyle: 'none',

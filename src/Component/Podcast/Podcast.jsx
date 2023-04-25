@@ -59,9 +59,10 @@ const Podcast = ({ item }) => {
 								display: "flex",
 								columnGap: "5px",
 								alignItems: "center",
+								justifyContent: 'center'
 							}}
 						>
-							<BsEyeFill />
+							<BsEyeFill className="mb-1" />
 							<h6>{item?.views} views</h6>
 						</span>
 						<Button variant="secondary">

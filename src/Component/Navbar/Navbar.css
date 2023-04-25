@@ -17,7 +17,7 @@ nav img {
     width: max-content;
 }
 
-input[type=text]::placeholder {
+.input::placeholder {
     text-align: center;
 }
 
