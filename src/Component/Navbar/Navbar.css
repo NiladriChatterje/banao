@@ -23,6 +23,8 @@ input[type=text]::placeholder {
 
 
 .icon {
+    z-index: 5;
+    color: grey;
     display: block;
     position: absolute;
     top: 50%;
@@ -35,10 +37,6 @@ input[type=text]::placeholder {
 }
 
 @media screen and (max-width: 1300px) {
-    .icon {
-        display: none;
-    }
-
     nav {
         font-size: 0.85em;
     }
@@ -51,4 +49,10 @@ input[type=text]::placeholder {
         font-size: 0.98em;
     }
 
+}
+
+@media screen and (max-width: 1300px) {
+    nav {
+        display: none;
+    }
 }
